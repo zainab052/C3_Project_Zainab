@@ -33,6 +33,10 @@ public class Restaurant {
         return menu;
     }
 
+    public List<Item> getOrder() {
+        return orderList;
+    }
+
     private Item findItemByName(String itemName){
         for(Item item: menu) {
             if(item.getName().equals(itemName))
@@ -65,6 +69,11 @@ public class Restaurant {
 
     public String getName() {
         return name;
+    }
+
+    public void addToOrder(String name) {
+        Item order = findItemByName(name);
+        orderList.add(order);
     }
 
 
