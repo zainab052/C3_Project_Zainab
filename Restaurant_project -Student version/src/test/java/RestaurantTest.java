@@ -47,7 +47,6 @@ class RestaurantTest {
     //get the price of the items in the list
     //add the values in the list
 
-
     @Test
     public void adding_item_in_list_should_calculate_total_price(){
         restaurant.addToMenu("Sizzling brownie",319);
@@ -55,8 +54,7 @@ class RestaurantTest {
         restaurant.addToOrder("Sizzling brownie");
 
         assertEquals(initialItemSize+1, restaurant.getOrder().size());
-
-
+        assertEquals(restaurant.getTotalPrice(restaurant.getOrder()), 319);
 
     }
     //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<TDD>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
