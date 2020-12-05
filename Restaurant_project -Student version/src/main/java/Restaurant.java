@@ -71,9 +71,15 @@ public class Restaurant {
         return name;
     }
 
-    public void addToOrder(String name) {
+    public void addToOrder(String name) throws itemNotFoundException {
         Item order = findItemByName(name);
-        orderList.add(order);
+        if (order != null){
+            orderList.add(order);
+        }
+        else{
+            throw new itemNotFoundException("Menu Item not Found");
+        }
+
     }
 
     public int getTotalPrice(List<Item> order) {

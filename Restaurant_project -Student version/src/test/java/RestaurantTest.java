@@ -49,7 +49,7 @@ class RestaurantTest {
 
     //if menu name not present throws error
     @Test
-    public void adding_existing_menu_item_in_order_list_should_calculate_total_price(){
+    public void adding_existing_menu_item_in_order_list_should_calculate_total_price() throws itemNotFoundException {
         restaurant.addToMenu("Sizzling brownie",319);
         int initialItemSize = restaurant.getOrder().size();
         restaurant.addToOrder("Sizzling brownie");
