@@ -76,4 +76,13 @@ public class Restaurant {
         orderList.add(order);
     }
 
+    public int getTotalPrice(List<Item> order) {
+        order = getOrder();
+        int price = 0;
+        for (Item item: order) {
+            price += item.getPrice();
+        }
+        return price;
+    }
+
 }
