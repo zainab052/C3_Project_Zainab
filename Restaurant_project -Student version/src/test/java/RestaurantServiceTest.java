@@ -12,8 +12,6 @@ class RestaurantServiceTest {
     Restaurant restaurant;
     //REFACTOR ALL THE REPEATED LINES OF CODE
 
-
-
     @BeforeEach
     public void run_before_all_test_cases(){
         LocalTime openingTime = LocalTime.parse("10:30:00");
@@ -29,6 +27,7 @@ class RestaurantServiceTest {
         //WRITE UNIT TEST CASE HERE
         assertNotNull(service.findRestaurantByName("Amelie's cafe"));
     }
+
     @Test
     public void searching_for_non_existing_restaurant_should_throw_exception() throws restaurantNotFoundException {
         //WRITE UNIT TEST CASE HERE

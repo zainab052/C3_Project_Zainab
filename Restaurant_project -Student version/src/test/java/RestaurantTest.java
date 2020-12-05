@@ -4,6 +4,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import java.time.LocalTime;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -40,6 +41,25 @@ class RestaurantTest {
     }
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //<<<<<<<<<<<<<<<<<<<<<<<<<<TDD>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //create a function for adding menu item into list
+    //get the price of the items in the list
+    //add the values in the list
+
+
+    @Test
+    public void adding_item_in_list_should_calculate_total_price(){
+        restaurant.addToMenu("Sizzling brownie",319);
+        int initialItemSize = restaurant.getOrder().size();
+        restaurant.addToOrder("Sizzling brownie");
+
+        assertEquals(initialItemSize+1, restaurant.getOrder().size());
+
+
+
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<TDD>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
